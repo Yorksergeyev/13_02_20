@@ -87,13 +87,9 @@
     display: flex;
     justify-content: space-between;
     width: 200px;
-}
-
-.soc_icons_r{
-    display: flex;
-    position: relative;
-    align-self: flex-end;
-    top: 18em;
+    position: absolute;
+    bottom:5%;
+    align-self: flex-end; 
 }
 
 .soc_icons_sm{
