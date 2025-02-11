@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайт про путешествия</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 
         <header class="header">
             <div id="logo">
-                <img src="img/logo.png" alt="logo, компания, Nordic">
+                <!-- <img src="img/logo.png" alt="logo, компания, Nordic"> -->
             </div>
             <nav class="nav">
                 <a href="#main" class="nav__a">Главная</a>
@@ -24,21 +24,25 @@
             </nav>
         </header>
         <div class="promo">
-            <h1 class="promo__h1">Только красивые путешествия</h1>
-            <p href="#">
-                <button class="promo__button">Присоединяйся</button>
-            </p>
-
-            <div class="soc_icons soc_icons_r">
-                <a href="https://vk.com">
-                    <div class="soc_icons__icon soc_icons__icon_vk"></div>
-                </a>
-                <a href="https://facebook.com">
-                    <div class="soc_icons__icon soc_icons__icon_face"></div>
-                </a>
-                <a href="https://instagram.com">
-                    <div class="soc_icons__icon soc_icons__icon_inst"></div>
-                </a>
+            <div class="promo__container__info">
+                <h1 class="promo__h1">Только красивые путешествия</h1>
+                <div class="promo__div">
+                    <div class="promo__button">Присоединяйся</div>
+                </div>
+            </div>
+            
+            <div class="promo__container__button">
+                <div class="soc_icons">
+                    <a href="https://vk.com">
+                        <div class="soc_icons__icon soc_icons__icon_vk"></div>
+                    </a>
+                    <a href="https://facebook.com">
+                        <div class="soc_icons__icon soc_icons__icon_face"></div>
+                    </a>
+                    <a href="https://instagram.com">
+                        <div class="soc_icons__icon soc_icons__icon_inst"></div>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -74,7 +78,9 @@
                 <li class="reasons_li"> Теплые отели в холодных странах</li>
                 <li class="reasons_li"> Холодные напитки в жарких странах </li>
             </ul>
-            <img src="img/beach.png" alt="" class="playa">
+            <div class="banner__img">
+                <img src="img/beach.png" alt="" class="playa">
+            </div>
         </div>
 
         <div class="cards">
@@ -102,8 +108,6 @@
                 <div class="card_line"></div>
                 <p class="card_p"> Классные сафари, быстрые львы и забавные обезьяны!</p>
             </div>
-        </div>
-        <div class="cards">
             <div class="card">
                 <div class="card_img_wrap">
                     <img src="img/north-america.png" alt="" class="card_img">
@@ -139,7 +143,7 @@
                 <p class="final_info__p">Email:travel@mars.ru</p>
                 <p class="final_info__p">Часы работы: пн 5-6</p>
 
-                        <div class="soc_icons soc_icons_sm">
+                <div class=" soc_icons_sm">
                 <a href="https://vk.com">
                     <div class="soc_icons__icon_1 soc_icons__icon_vk"></div>
                 </a>

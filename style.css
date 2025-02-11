@@ -1,4 +1,5 @@
 @import 'reset.css';
+@import 'adaptive.css';
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap');
 :root {
 
@@ -26,9 +27,11 @@
     padding: 5px 20px;
 }
 
-#logo img{
+#logo{
+    background-image: url("img/logo.png");
     width: 75px;
     height: 75px;
+    background-size: cover;
 }
 
 .nav{
@@ -42,6 +45,10 @@
     font-size: var(--size-header);
     color: white;
     font-weight: bold;
+    transition: 0.3s;
+}
+.nav__a:hover{
+    color: yellow;
 }
 
 .promo{
@@ -51,11 +58,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
 }
 
 .promo__h1{
@@ -66,42 +73,61 @@
     
 }
 
+.promo__container__info{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.promo__container__button{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.promo__div{
+    padding-top: 15px;
+    padding-right: 5px;
+}
+
 .promo__button{
+    width: 85%;
+    height: 50%;
+    padding: 15px;
     background-color: var(--danger-color);
     color: white;
     font-size: calc(var(--size-header) /1.2);
-    padding: 15px;
-    border-radius: 7px;
-    margin-top: 20px;
     font-family: var(--font-parag);
+    border-left: yellow solid 5px;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 
+
 .promo__button:hover{
-    cursor: pointer;
     background-color: white;
     color: var(--main-bg-color);
-    transition: all 0.5s;
+    border-left: rgb(243, 101, 6) solid 5px;
 }
 
 .soc_icons{
     display: flex;
-    justify-content: space-between;
-    width: 200px;
-}
-
-.soc_icons_r{
-    display: flex;
-    position: relative;
-    align-self: flex-end;
-    top: 18em;
+    justify-content: space-around;
+    width: 20%;
 }
 
 .soc_icons_sm{
     display: flex;
     justify-content: space-between;
-    width: 150px;
-    margin-left: 10px;
+    width: 50%;
+    margin-left: 15px;
 }
+
 
 .soc_icons__icon{
     background-size: contain;
@@ -141,7 +167,7 @@
     font-size: var(--size-header);
     font-weight: bold;
     font-family: var(--font-header);
-
+    
 }
 
 .info_p{
@@ -149,6 +175,7 @@
     font-size: var(--size-parag);
     font-family: var(--font-parag);
 }
+
 
 .banner{
     border: 3px solid black;
@@ -195,12 +222,15 @@
     content:"☕ ";
     margin-right: 10px;
 }
-.playa{
-    margin-left: 28.5em;
-    height: 300px;
+.banner__img{
+    display: flex;
+    justify-content: center;
 }
-.cards{
-    
+.playa{
+    height: 10%;
+    width: 25%;
+}
+.cards{ 
     display: flex;
     flex-wrap: wrap;
 }
@@ -283,4 +313,152 @@
     text-decoration: none;
     font-size: var(--size-parag);
     font-family: var(--font-parag);
+}
+
+/* Медиа-запрос для устройств с шириной экрана до 768px */
+@media (max-width: 768px) {
+
+    /* Уменьшаем ширину wrapper для мобильных устройств */
+    .wrapper {
+        width: 375px;
+    }
+
+    /* Уменьшаем высоту header и меняем padding */
+    .header {
+        height: 60px;
+        padding: 5px 10px;
+    }
+
+    /* Уменьшаем размер логотипа */
+    #logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Меняем стили навигации для мобильных устройств */
+    .nav {
+        width: 70%;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .nav__a {
+        font-size: 18px; /* Уменьшаем размер шрифта */
+    }
+
+    /* Адаптируем промо-секцию */
+    .promo {
+        height: 50vh; /* Уменьшаем высоту */
+        margin-top: 5px;
+    }
+
+    .promo__h1 {
+        font-size: 24px; /* Уменьшаем размер заголовка */
+        text-align: center;
+    }
+
+    .promo__button {
+        width: 90%; /* Увеличиваем ширину кнопки */
+        font-size: 18px; /* Уменьшаем размер шрифта */
+    }
+
+    /* Адаптируем социальные иконки */
+    .playa{
+        width: 100%;
+    }
+
+    .soc_icons {
+        width: 40%;
+        justify-content: space-around;
+    }
+
+    .soc_icons_sm {
+        margin-left: 45px;
+        width: 60%;
+    }
+
+    .soc_icons__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .soc_icons__icon_1 {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Адаптируем секцию info */
+    .info_h3 {
+        padding: 15px 20px; /* Уменьшаем padding */
+        font-size: 24px; /* Уменьшаем размер шрифта */
+    }
+
+    .info_p {
+        padding: 20px 10px; /* Уменьшаем padding */
+        font-size: 16px; /* Уменьшаем размер шрифта */
+    }
+
+    /* Адаптируем секцию banner */
+    .banner_h3 {
+        padding: 15px 20px; /* Уменьшаем padding */
+        font-size: 24px; /* Уменьшаем размер шрифта */
+    }
+
+    .reasons_u1 {
+        padding: 20px 10px; /* Уменьшаем padding */
+        font-size: 16px; /* Уменьшаем размер шрифта */
+    }
+
+    .reasons_li {
+        font-size: 18px; /* Уменьшаем размер шрифта */
+    }
+
+    /* Адаптируем карточки */
+    .cards {
+        flex-direction: column; /* Меняем направление на вертикальное */
+        align-items: center;
+    }
+
+    .card {
+        width: 375px; /* Увеличиваем ширину карточки */
+        margin-bottom: 20px; /* Добавляем отступ между карточками */
+    }
+
+    .card_img_wrap {
+        height: 200px; /* Уменьшаем высоту изображения */
+    }
+
+    .card_h5 {
+        font-size: 20px; /* Уменьшаем размер шрифта */
+    }
+
+    .card_p {
+        font-size: 16px; /* Уменьшаем размер шрифта */
+    }
+
+    /* Адаптируем футер */
+    .final {
+        flex-direction: column; /* Меняем направление на вертикальное */
+        align-items: center;
+        text-align: center;
+        padding: 20px 10px; /* Уменьшаем padding */
+    }
+
+    .final_info__p1 {
+        font-size: 24px; /* Уменьшаем размер шрифта */
+    }
+
+    .final_info__p2 {
+        font-size: 18px; /* Уменьшаем размер шрифта */
+    }
+
+    .final_travel {
+        margin: 20px 0 20px 0; 
+        text-align: center; /* Выравниваем текст по центру */
+    }
+
+    .logo {
+        height: 150px; /* Уменьшаем высоту логотипа */
+        width: 150px; /* Уменьшаем ширину логотипа */
+    }
 }
