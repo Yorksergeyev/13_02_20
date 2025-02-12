@@ -39,14 +39,14 @@
     justify-content: space-around;
 }
 
-.nav__a{
+.nav a{
     text-decoration: none;
     font-size: var(--size-header);
     color: white;
     font-weight: bold;
     transition: 0.3s;
 }
-.nav__a:hover{
+.nav a:hover{
     color: yellow;
 }
 
@@ -64,7 +64,7 @@
     align-items: center;
 }
 
-.promo__h1{
+.promo h1{
     font-size: calc(var(--size-header)*1.4);
     color: white;
     font-weight: bold;
@@ -89,15 +89,16 @@
     align-items: flex-end;
 }
 
-.promo__div{
-    padding-top: 15px;
-    padding-right: 5px;
-}
 
 .promo__button{
-    width: 85%;
-    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 8%;
     padding: 15px;
+    margin-top: 15px;
+    margin-right: 5px;
     background-color: var(--danger-color);
     color: white;
     font-size: calc(var(--size-header) /1.2);
@@ -158,7 +159,7 @@
     border: 3px solid black;
 }
 
-.info_h3{
+.info h3{
     text-align: center;
     background-color: var(--main-bg-color);
     padding: 22px 250px; 
@@ -169,7 +170,7 @@
     
 }
 
-.info_p{
+.info p{
     padding: 50px 40px 30px 40px;
     font-size: var(--size-parag);
     font-family: var(--font-parag);
@@ -180,7 +181,7 @@
     border: 3px solid black;
 }
 
-.banner_h3{
+.banner h3{
     text-align: center;
     background-color: var(--main-bg-color);
     padding: 22px 250px; 
@@ -190,44 +191,45 @@
     font-family: var(--font-header);
 }
 
-.reasons_u1{
+.banner ul{
     padding: 50px 40px 30px 40px;
     font-size: var(--size-parag);
     font-family: var(--font-parag);
 }
-.reasons_li{
+.banner li{
     text-align: center;
     font-size: var(--size-header);
     line-height: 1.4;
 }
-.reasons_li:nth-child(1):before{
+.banner li:nth-child(1):before{
     content:"😂";
     margin-right: 10px;
 }
-.reasons_li:nth-child(2):before{
+.banner li:nth-child(2):before{
     content:"☯ ";
     margin-right: 10px;
 }
 
-.reasons_li:nth-child(3):before{
+.banner li:nth-child(3):before{
     content:"🌏 ";
     margin-right: 10px;
 }
-.reasons_li:nth-child(4):before{
+.banner li:nth-child(4):before{
     content:"🌴 ";
     margin-right: 10px;
 }
-.reasons_li:nth-child(5):before{
+.banner li:nth-child(5):before{
     content:"☕ ";
     margin-right: 10px;
 }
-.banner__img{
+.banner div{
     display: flex;
     justify-content: center;
 }
-.playa{
+.banner img{
     height: 10%;
     width: 25%;
+    padding: 0 0 25px 0;
 }
 .cards{ 
     display: flex;
@@ -248,11 +250,11 @@
     align-items: center;
     height: 250px;
 }
-.card_img{
+.card img{
     height: inherit;
 }
 
-.card_h5{
+.card h5{
     font-family: var(--font-header);
     font-size: calc(var(--size-header))/1.2;
     padding: 15px 0;
@@ -265,7 +267,7 @@
     width: 40%;
 }
 
-.card_p{
+.card p{
     font-family: var(--font-parag);
     font-size: var(--size-parag);
     margin: 20px;
@@ -279,7 +281,7 @@
     font-size: 18px;
 }
 
-.final_info__p{
+.final_info p{
     padding: 10px;
 }
 
@@ -306,7 +308,7 @@
     justify-content: space-around;
     text-align: right;
 }
-.final_travel_p{
+.final_travel p{
     padding: 10px;
     color: white;
     text-decoration: none;
@@ -341,7 +343,7 @@
         padding: 0 10px;
     }
 
-    .nav__a {
+    .nav a {
         font-size: 18px; /* Уменьшаем размер шрифта */
     }
 
@@ -351,19 +353,20 @@
         margin-top: 5px;
     }
 
-    .promo__h1 {
+    .promo h1 {
         font-size: 24px; /* Уменьшаем размер заголовка */
         text-align: center;
     }
 
     .promo__button {
-        width: 90%; /* Увеличиваем ширину кнопки */
+        width: 35%; /* Увеличиваем ширину кнопки */
         font-size: 18px; /* Уменьшаем размер шрифта */
     }
 
     /* Адаптируем социальные иконки */
-    .playa{
-        width: 100%;
+    .banner img{
+        width: 70%;
+        padding: 0 0 25px 0;
     }
 
     .soc_icons {
@@ -387,28 +390,28 @@
     }
 
     /* Адаптируем секцию info */
-    .info_h3 {
+    .info h3 {
         padding: 15px 20px; /* Уменьшаем padding */
         font-size: 24px; /* Уменьшаем размер шрифта */
     }
 
-    .info_p {
+    .info p {
         padding: 20px 10px; /* Уменьшаем padding */
         font-size: 16px; /* Уменьшаем размер шрифта */
     }
 
     /* Адаптируем секцию banner */
-    .banner_h3 {
+    .banner h3 {
         padding: 15px 20px; /* Уменьшаем padding */
         font-size: 24px; /* Уменьшаем размер шрифта */
     }
 
-    .reasons_u1 {
+    .banner ul {
         padding: 20px 10px; /* Уменьшаем padding */
         font-size: 16px; /* Уменьшаем размер шрифта */
     }
 
-    .reasons_li {
+    .banner li {
         font-size: 18px; /* Уменьшаем размер шрифта */
     }
 
@@ -427,11 +430,11 @@
         height: 200px; /* Уменьшаем высоту изображения */
     }
 
-    .card_h5 {
+    .card h5 {
         font-size: 20px; /* Уменьшаем размер шрифта */
     }
 
-    .card_p {
+    .card p {
         font-size: 16px; /* Уменьшаем размер шрифта */
     }
 
@@ -461,3 +464,19 @@
         width: 150px; /* Уменьшаем ширину логотипа */
     }
 }
+
+/* @keyframes blink{
+    0%{
+    }
+    100%{
+        width: 40%;
+    }
+}
+
+
+.promo__button{
+    animation: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+} */
