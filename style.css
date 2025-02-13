@@ -13,6 +13,10 @@
     --size-header: 32px;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .wrapper{
     width: 1200px;
     margin: 0 auto;
